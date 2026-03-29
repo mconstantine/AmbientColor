@@ -306,7 +306,7 @@ internal inline fun<T, reified E: Throwable> uniffiTraitInterfaceCallWithError(
         }
     }
 }
-// Initial value and increment amount for handles.
+// Initial value and increment amount for handles. 
 // These ensure that Kotlin-generated handles always have the lowest bit set
 private const val UNIFFI_HANDLEMAP_INITIAL = 1.toLong()
 private const val UNIFFI_HANDLEMAP_DELTA = 2.toLong()
@@ -316,7 +316,7 @@ private const val UNIFFI_HANDLEMAP_DELTA = 2.toLong()
 // This is used pass an opaque 64-bit handle representing a foreign object to the Rust code.
 internal class UniffiHandleMap<T: Any> {
     private val map = ConcurrentHashMap<Long, T>()
-    // Start
+    // Start 
     private val counter = java.util.concurrent.atomic.AtomicLong(UNIFFI_HANDLEMAP_INITIAL)
 
     val size: Int
@@ -640,25 +640,25 @@ internal object IntegrityCheckingUniffiLib {
     external fun ffi_android_ffi_uniffi_contract_version(
     ): Int
 
-
+        
 }
 
 internal object UniffiLib {
-
+    
 
     init {
         Native.register(UniffiLib::class.java, findLibraryName(componentName = "android_ffi"))
-
+        
     }
-    external fun uniffi_android_ffi_fn_func_generate_color_android(uniffi_out_err: UniffiRustCallStatus,
+    external fun uniffi_android_ffi_fn_func_generate_color_android(uniffi_out_err: UniffiRustCallStatus, 
     ): RustBuffer.ByValue
-    external fun ffi_android_ffi_rustbuffer_alloc(`size`: Long,uniffi_out_err: UniffiRustCallStatus,
+    external fun ffi_android_ffi_rustbuffer_alloc(`size`: Long,uniffi_out_err: UniffiRustCallStatus, 
     ): RustBuffer.ByValue
-    external fun ffi_android_ffi_rustbuffer_from_bytes(`bytes`: ForeignBytes.ByValue,uniffi_out_err: UniffiRustCallStatus,
+    external fun ffi_android_ffi_rustbuffer_from_bytes(`bytes`: ForeignBytes.ByValue,uniffi_out_err: UniffiRustCallStatus, 
     ): RustBuffer.ByValue
-    external fun ffi_android_ffi_rustbuffer_free(`buf`: RustBuffer.ByValue,uniffi_out_err: UniffiRustCallStatus,
+    external fun ffi_android_ffi_rustbuffer_free(`buf`: RustBuffer.ByValue,uniffi_out_err: UniffiRustCallStatus, 
     ): Unit
-    external fun ffi_android_ffi_rustbuffer_reserve(`buf`: RustBuffer.ByValue,`additional`: Long,uniffi_out_err: UniffiRustCallStatus,
+    external fun ffi_android_ffi_rustbuffer_reserve(`buf`: RustBuffer.ByValue,`additional`: Long,uniffi_out_err: UniffiRustCallStatus, 
     ): RustBuffer.ByValue
     external fun ffi_android_ffi_rust_future_poll_u8(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
     ): Unit
@@ -666,7 +666,7 @@ internal object UniffiLib {
     ): Unit
     external fun ffi_android_ffi_rust_future_free_u8(`handle`: Long,
     ): Unit
-    external fun ffi_android_ffi_rust_future_complete_u8(`handle`: Long,uniffi_out_err: UniffiRustCallStatus,
+    external fun ffi_android_ffi_rust_future_complete_u8(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
     ): Byte
     external fun ffi_android_ffi_rust_future_poll_i8(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
     ): Unit
@@ -674,7 +674,7 @@ internal object UniffiLib {
     ): Unit
     external fun ffi_android_ffi_rust_future_free_i8(`handle`: Long,
     ): Unit
-    external fun ffi_android_ffi_rust_future_complete_i8(`handle`: Long,uniffi_out_err: UniffiRustCallStatus,
+    external fun ffi_android_ffi_rust_future_complete_i8(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
     ): Byte
     external fun ffi_android_ffi_rust_future_poll_u16(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
     ): Unit
@@ -682,7 +682,7 @@ internal object UniffiLib {
     ): Unit
     external fun ffi_android_ffi_rust_future_free_u16(`handle`: Long,
     ): Unit
-    external fun ffi_android_ffi_rust_future_complete_u16(`handle`: Long,uniffi_out_err: UniffiRustCallStatus,
+    external fun ffi_android_ffi_rust_future_complete_u16(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
     ): Short
     external fun ffi_android_ffi_rust_future_poll_i16(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
     ): Unit
@@ -690,7 +690,7 @@ internal object UniffiLib {
     ): Unit
     external fun ffi_android_ffi_rust_future_free_i16(`handle`: Long,
     ): Unit
-    external fun ffi_android_ffi_rust_future_complete_i16(`handle`: Long,uniffi_out_err: UniffiRustCallStatus,
+    external fun ffi_android_ffi_rust_future_complete_i16(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
     ): Short
     external fun ffi_android_ffi_rust_future_poll_u32(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
     ): Unit
@@ -698,7 +698,7 @@ internal object UniffiLib {
     ): Unit
     external fun ffi_android_ffi_rust_future_free_u32(`handle`: Long,
     ): Unit
-    external fun ffi_android_ffi_rust_future_complete_u32(`handle`: Long,uniffi_out_err: UniffiRustCallStatus,
+    external fun ffi_android_ffi_rust_future_complete_u32(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
     ): Int
     external fun ffi_android_ffi_rust_future_poll_i32(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
     ): Unit
@@ -706,7 +706,7 @@ internal object UniffiLib {
     ): Unit
     external fun ffi_android_ffi_rust_future_free_i32(`handle`: Long,
     ): Unit
-    external fun ffi_android_ffi_rust_future_complete_i32(`handle`: Long,uniffi_out_err: UniffiRustCallStatus,
+    external fun ffi_android_ffi_rust_future_complete_i32(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
     ): Int
     external fun ffi_android_ffi_rust_future_poll_u64(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
     ): Unit
@@ -714,7 +714,7 @@ internal object UniffiLib {
     ): Unit
     external fun ffi_android_ffi_rust_future_free_u64(`handle`: Long,
     ): Unit
-    external fun ffi_android_ffi_rust_future_complete_u64(`handle`: Long,uniffi_out_err: UniffiRustCallStatus,
+    external fun ffi_android_ffi_rust_future_complete_u64(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
     ): Long
     external fun ffi_android_ffi_rust_future_poll_i64(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
     ): Unit
@@ -722,7 +722,7 @@ internal object UniffiLib {
     ): Unit
     external fun ffi_android_ffi_rust_future_free_i64(`handle`: Long,
     ): Unit
-    external fun ffi_android_ffi_rust_future_complete_i64(`handle`: Long,uniffi_out_err: UniffiRustCallStatus,
+    external fun ffi_android_ffi_rust_future_complete_i64(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
     ): Long
     external fun ffi_android_ffi_rust_future_poll_f32(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
     ): Unit
@@ -730,7 +730,7 @@ internal object UniffiLib {
     ): Unit
     external fun ffi_android_ffi_rust_future_free_f32(`handle`: Long,
     ): Unit
-    external fun ffi_android_ffi_rust_future_complete_f32(`handle`: Long,uniffi_out_err: UniffiRustCallStatus,
+    external fun ffi_android_ffi_rust_future_complete_f32(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
     ): Float
     external fun ffi_android_ffi_rust_future_poll_f64(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
     ): Unit
@@ -738,7 +738,7 @@ internal object UniffiLib {
     ): Unit
     external fun ffi_android_ffi_rust_future_free_f64(`handle`: Long,
     ): Unit
-    external fun ffi_android_ffi_rust_future_complete_f64(`handle`: Long,uniffi_out_err: UniffiRustCallStatus,
+    external fun ffi_android_ffi_rust_future_complete_f64(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
     ): Double
     external fun ffi_android_ffi_rust_future_poll_rust_buffer(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
     ): Unit
@@ -746,7 +746,7 @@ internal object UniffiLib {
     ): Unit
     external fun ffi_android_ffi_rust_future_free_rust_buffer(`handle`: Long,
     ): Unit
-    external fun ffi_android_ffi_rust_future_complete_rust_buffer(`handle`: Long,uniffi_out_err: UniffiRustCallStatus,
+    external fun ffi_android_ffi_rust_future_complete_rust_buffer(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
     ): RustBuffer.ByValue
     external fun ffi_android_ffi_rust_future_poll_void(`handle`: Long,`callback`: UniffiRustFutureContinuationCallback,`callbackData`: Long,
     ): Unit
@@ -754,10 +754,10 @@ internal object UniffiLib {
     ): Unit
     external fun ffi_android_ffi_rust_future_free_void(`handle`: Long,
     ): Unit
-    external fun ffi_android_ffi_rust_future_complete_void(`handle`: Long,uniffi_out_err: UniffiRustCallStatus,
+    external fun ffi_android_ffi_rust_future_complete_void(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
     ): Unit
 
-
+        
 }
 
 private fun uniffiCheckContractApiVersion(lib: IntegrityCheckingUniffiLib) {
@@ -771,7 +771,7 @@ private fun uniffiCheckContractApiVersion(lib: IntegrityCheckingUniffiLib) {
 }
 @Suppress("UNUSED_PARAMETER")
 private fun uniffiCheckApiChecksums(lib: IntegrityCheckingUniffiLib) {
-    if (lib.uniffi_android_ffi_checksum_func_generate_color_android() != 60585.toShort()) {
+    if (lib.uniffi_android_ffi_checksum_func_generate_color_android() != 25863.toShort()) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
 }
@@ -849,7 +849,7 @@ inline fun <T : Disposable?, R> T.use(block: (T) -> R) =
         }
     }
 
-/**
+/** 
  * Placeholder object used to signal that we're constructing an interface with a FFI handle.
  *
  * This is the first argument for interface constructors that input a raw handle. It exists is that
@@ -860,7 +860,7 @@ inline fun <T : Disposable?, R> T.use(block: (T) -> R) =
  * */
 object UniffiWithHandle
 
-/**
+/** 
  * Used to instantiate an interface without an actual pointer, for fakes in tests, mostly.
  *
  * @suppress
@@ -870,23 +870,23 @@ object NoHandle
 /**
  * @suppress
  */
-public object FfiConverterUInt: FfiConverter<UInt, Int> {
-    override fun lift(value: Int): UInt {
-        return value.toUInt()
+public object FfiConverterByte: FfiConverter<Byte, Byte> {
+    override fun lift(value: Byte): Byte {
+        return value
     }
 
-    override fun read(buf: ByteBuffer): UInt {
-        return lift(buf.getInt())
+    override fun read(buf: ByteBuffer): Byte {
+        return buf.get()
     }
 
-    override fun lower(value: UInt): Int {
-        return value.toInt()
+    override fun lower(value: Byte): Byte {
+        return value
     }
 
-    override fun allocationSize(value: UInt) = 4UL
+    override fun allocationSize(value: Byte) = 1UL
 
-    override fun write(value: UInt, buf: ByteBuffer) {
-        buf.putInt(value.toInt())
+    override fun write(value: Byte, buf: ByteBuffer) {
+        buf.put(value)
     }
 }
 
@@ -949,13 +949,28 @@ public object FfiConverterString: FfiConverter<String, RustBuffer.ByValue> {
 
 
 
-data class AndroidColorResult (
-    var `result`: kotlin.UInt
+sealed class AndroidColorResult {
+    
+    data class Ok(
+        val `temperature`: kotlin.Byte) : AndroidColorResult()
+        
+    {
+        
 
-){
+        companion object
+    }
+    
+    object NetworkError : AndroidColorResult()
+    
+    
+    object ParseError : AndroidColorResult()
+    
+    
 
+    
 
-
+    
+    
 
 
     companion object
@@ -964,29 +979,68 @@ data class AndroidColorResult (
 /**
  * @suppress
  */
-public object FfiConverterTypeAndroidColorResult: FfiConverterRustBuffer<AndroidColorResult> {
+public object FfiConverterTypeAndroidColorResult : FfiConverterRustBuffer<AndroidColorResult>{
     override fun read(buf: ByteBuffer): AndroidColorResult {
-        return AndroidColorResult(
-            FfiConverterUInt.read(buf),
-        )
+        return when(buf.getInt()) {
+            1 -> AndroidColorResult.Ok(
+                FfiConverterByte.read(buf),
+                )
+            2 -> AndroidColorResult.NetworkError
+            3 -> AndroidColorResult.ParseError
+            else -> throw RuntimeException("invalid enum value, something is very wrong!!")
+        }
     }
 
-    override fun allocationSize(value: AndroidColorResult) = (
-            FfiConverterUInt.allocationSize(value.`result`)
-    )
+    override fun allocationSize(value: AndroidColorResult) = when(value) {
+        is AndroidColorResult.Ok -> {
+            // Add the size for the Int that specifies the variant plus the size needed for all fields
+            (
+                4UL
+                + FfiConverterByte.allocationSize(value.`temperature`)
+            )
+        }
+        is AndroidColorResult.NetworkError -> {
+            // Add the size for the Int that specifies the variant plus the size needed for all fields
+            (
+                4UL
+            )
+        }
+        is AndroidColorResult.ParseError -> {
+            // Add the size for the Int that specifies the variant plus the size needed for all fields
+            (
+                4UL
+            )
+        }
+    }
 
     override fun write(value: AndroidColorResult, buf: ByteBuffer) {
-            FfiConverterUInt.write(value.`result`, buf)
+        when(value) {
+            is AndroidColorResult.Ok -> {
+                buf.putInt(1)
+                FfiConverterByte.write(value.`temperature`, buf)
+                Unit
+            }
+            is AndroidColorResult.NetworkError -> {
+                buf.putInt(2)
+                Unit
+            }
+            is AndroidColorResult.ParseError -> {
+                buf.putInt(3)
+                Unit
+            }
+        }.let { /* this makes the `when` an expression, which ensures it is exhaustive */ }
     }
-} fun `generateColorAndroid`(): AndroidColorResult {
+}
+
+ fun `generateColorAndroid`(): AndroidColorResult {
             return FfiConverterTypeAndroidColorResult.lift(
     uniffiRustCall() { _status ->
     UniffiLib.uniffi_android_ffi_fn_func_generate_color_android(
-
+    
         _status)
 }
     )
     }
-
+    
 
 
